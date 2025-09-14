@@ -1,0 +1,257 @@
+/* Google Font */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?food,donation') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero .content {
+    position: relative;
+    color: #fff;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 8px;
+    font-weight: 600;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #388E3C;
+}
+
+.btn-alt {
+    background: #2196F3;
+}
+
+.btn-alt:hover {
+    background: #1976D2;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+form label {
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background: #4CAF50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+/* Background for Add/View Pages */
+.page-bg {
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+form label {
+    margin-top: 12px;
+    font-weight: 600;
+    color: #444;
+}
+
+form input, form textarea {
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #388E3C;
+    transform: scale(1.05);
+}
+
+.btn-alt {
+    background: #2196F3;
+}
+
+.btn-alt:hover {
+    background: #1976D2;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 14px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+}
+
+table tr:hover {
+    background: #f1f8e9;
+    transition: 0.3s;
+}
+
+/* Search Bar */
+#searchInput {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}

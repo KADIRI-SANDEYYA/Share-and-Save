@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Donations | Food Donation Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body class="page-bg">
+    <div class="container card">
+        <h2>📋 Food Donations List</h2>
+        <p class="subtitle">View all registered food donations and track the impact of each contribution.</p>
+
+        <input type="text" id="searchInput" placeholder="🔍 Search donations..." onkeyup="searchTable()">
+
+        <table id="donationTable">
+            <thead>
+                <tr>
+                    <th>Donor Name</th>
+                    <th>Food Name</th>
+                    <th>Quantity</th>
+                    <th>Donate Date</th>
+                    <th>Phone</th>
+                    <th>Location</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <!-- <tbody>
+                {% for item in donations %}
+                <tr>
+                    <td>{{ item['Donor Name'] }}</td>
+                    <td>{{ item['Food Name'] }}</td>
+                    <td>{{ item['Quantity'] }}</td>
+                    <td>{{ item['Donate Date'] }}</td>
+                    <td>{{ item['Phone'] }}</td>
+                    <td>{{ item['Location'] }}</td>
+                    <td>{{ item['Address'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody> -->
+            <tbody>
+                {% if donations %}
+                    {% for item in donations %}
+                    <tr>
+                        <td>{{ item['Donor Name'] }}</td>
+                        <td>{{ item['Food Name'] }}</td>
+                        <td>{{ item['Quantity'] }}</td>
+                        <td>{{ item['Donate Date'] }}</td>
+                        <td>{{ item['Phone'] }}</td>
+                        <td>{{ item['Location'] }}</td>
+                        <td>{{ item['Address'] }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="7" style="text-align:center; color:gray;">No donations recorded yet.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('home') }}" class="btn btn-alt">⬅ Back to Home</a>
+    </div>
+
+    <script>
+        // Live search filter for table
+        function searchTable() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let rows = document.querySelectorAll("#donationTable tbody tr");
+            rows.forEach(row => {
+                let text = row.innerText.toLowerCase();
+                row.style.display = text.includes(input) ? "" : "none";
+            });
+        }
+    </script>
+</body>
+</html>

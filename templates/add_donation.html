@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Donation | Food Donation Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body class="page-bg">
+    <div class="container card form-card">
+        <h2>🍛 Make a Food Donation</h2>
+        <p class="subtitle">Fill out the form below to share your surplus food and make a meaningful impact in the community.</p>
+
+        <form method="POST">
+            <label>👤 Donor Name</label>
+            <input type="text" name="donor" placeholder="Enter your full name" required>
+
+            <label>🥘 Food Name</label>
+            <input type="text" name="food" placeholder="e.g., Rice, Fruits, Bread" required>
+
+            <label>📦 Quantity</label>
+            <input type="text" name="quantity" placeholder="e.g., 5 kg, 20 packs" required>
+
+            <label>📅 Donation Date</label>
+            <input type="date" name="donate_date" required>
+
+            <label>📞 Phone</label>
+            <input type="text" name="phone" placeholder="Enter your contact number" required>
+
+            <label>📍 Location</label>
+            <input type="text" name="location" placeholder="City or Area" required>
+
+            <label>🏠 Address</label>
+            <textarea name="address" placeholder="Full address for pickup/drop-off" required></textarea>
+
+            <button type="submit" class="btn">✅ Submit Donation</button>
+        </form>
+        <a href="{{ url_for('home') }}" class="btn btn-alt">⬅ Back to Home</a>
+    </div>
+</body>
+</html>
