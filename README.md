@@ -76,3 +76,5 @@ A lightweight web application that connects food donors with NGOs and community 
 **Kadiri Sandeyya**  
 - 📧 **Email**: kadirisamson81@gmail.com
 - 💼 **LinkedIn**: [My Linkedin Profile](https://www.linkedin.com/in/kadirisandeyya)
+
+---
